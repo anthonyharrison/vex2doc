@@ -47,8 +47,7 @@ Output:
 The `--input-file` option is used to specify the VEX to be processed. The type of file VEX is automatically determined by checking for content in the following order:
 
 - CSAF
-- Cyclone
-- DX
+- CycloneDX
 - OpenVEX
 - SPDX
 
