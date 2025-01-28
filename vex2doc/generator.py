@@ -1,14 +1,12 @@
-# Copyright (C) 2024 Anthony Harrison
+# Copyright (C) 2025 Anthony Harrison
 # SPDX-License-Identifier: Apache-2.0
 
-from packageurl import PackageURL
-
 from sbom2doc.docbuilder.consolebuilder import ConsoleBuilder
+from sbom2doc.docbuilder.htmlbuilder import HTMLBuilder
 from sbom2doc.docbuilder.jsonbuilder import JSONBuilder
 from sbom2doc.docbuilder.markdownbuilder import MarkdownBuilder
 from sbom2doc.docbuilder.pdfbuilder import PDFBuilder
 from sbom2doc.docbuilder.spreadsheetbuilder import SpreadsheetBuilder
-from sbom2doc.docbuilder.htmlbuilder import HTMLBuilder
 
 
 def generate_document(format, vex_parser, filename, outfile):
@@ -37,7 +35,7 @@ def generate_document(format, vex_parser, filename, outfile):
     vex_document.addrow(["VEX File", filename])
     vex_document.addrow(["VEX Type", vex_type])
     for key, value in metadata.items():
-        vex_document.addrow([key.capitalize() , str(value)])
+        vex_document.addrow([key.capitalize(), str(value)])
     vex_document.showtable(widths=[5, 9])
 
     vex_document.heading(1, "Product Summary")
